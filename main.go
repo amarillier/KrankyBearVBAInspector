@@ -287,9 +287,9 @@ func printResults(result *VBAInspectionResult) {
 
 	// Standard detailed output
 	fmt.Printf("\n")
-	fmt.Printf("═══════════════════════════════════════════════════════════════\n")
+	fmt.Printf("----------------------\n")
 	fmt.Printf("  VBA Inspector Report\n")
-	fmt.Printf("═══════════════════════════════════════════════════════════════\n")
+	fmt.Printf("----------------------\n")
 	fmt.Printf("File: %s\n\n", result.FileName)
 
 	if !result.VBAProjectFound {
@@ -337,5 +337,5 @@ func printResults(result *VBAInspectionResult) {
 		}
 	}
 
-	fmt.Printf("\n═══════════════════════════════════════════════════════════════\n\n")
+	fmt.Printf("\n----------------------\n\n")
 }
