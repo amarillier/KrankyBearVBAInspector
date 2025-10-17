@@ -12,7 +12,7 @@ This tool helps identify VBA code that uses `Declare Function` without `PtrSafe`
 - ✅ Supports Excel (.xlsm, .xlsx), Word (.docm, .docx), and PowerPoint (.pptm, .pptx) files
 - ✅ Identifies 32-bit only function declarations
 - ✅ Reports 64-bit compatible declarations
-- ✅ Color-coded output for easy reading
+- ✅ Color-coded output for easy reading, or -brief mode for basic text summary only
 - ✅ Exit codes for CI/CD integration
 
 ## Installation
@@ -25,6 +25,8 @@ cd KrankyBearVBAinspector
 
 # Build for your current platform
 go build -o vbainspector
+# Build stripped for current platform without debug symbols
+go build -ldflags="-w -s" -o vbainspector
 
 # Or build for all platforms (Windows, Linux, macOS Intel & ARM)
 make all
@@ -65,10 +67,10 @@ vbainspector -? | -help | --help  # Show help message
 ./vbainspector -v
 
 # Inspect an Excel file (detailed output)
-./vbainspector 01-TrainingSchedules.xlsm
+./vbainspector Schedules.xlsm
 
 # Inspect with brief output (simple text list)
-./vbainspector -brief 01-TrainingSchedules.xlsm
+./vbainspector -brief Schedules.xlsm
 ./vbainspector -b myfile.xlsm
 ./vbainspector --brief myfile.xlsm
 
@@ -161,7 +163,7 @@ This tool operates **entirely in memory** without extracting files to disk:
 
 ## License
 
-This tool is provided as-is for inspecting VBA code compatibility.
+This tool is provided as-is under the GNU GPL 3.0 license for inspecting VBA code compatibility.
 
 ## Contributing
 
