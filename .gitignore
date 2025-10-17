@@ -1,0 +1,32 @@
+# Binaries
+vbainspector
+vbainspector.exe
+!bin/
+git.txt
+
+
+# Go build artifacts
+*.o
+*.a
+*.so
+
+# Go test coverage
+*.out
+coverage.txt
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+test/
+
